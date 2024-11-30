@@ -14,9 +14,10 @@ struct TodoListApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
+            NavigationView {
                 ListView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(listViewModel)
         }
     }
